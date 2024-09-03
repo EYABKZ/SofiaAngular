@@ -11,6 +11,12 @@
     <textarea id="message" formControlName="message"></textarea>
     <br><br>
   
-    <button type="submit">Envoyer</button>
+    <button type="submit">Envoyer</button> <button type="reset">Annuler</button>
   </form>
   
+  <h2>Users</h2>
+  <ul>
+    <li *ngFor="let contact_form of contact_forms">
+      {{ contact_form.name }} ({{ contact_form.email }}) - {{ contact_form.message }}
+    </li>
+  </ul>
